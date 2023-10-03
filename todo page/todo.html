@@ -1,0 +1,32 @@
+<?php $this->yellow->layout("header") ?>
+
+	<h1><?php echo $this->yellow->page->getHtml("titleContent") ?></h1>
+
+	<?php echo $this->yellow->page->getContentHtml() ?>
+
+	<h2>Drafts</h2>
+	<?php $drafts = $this->yellow->content->index(true)->filter("status", "draft")->sort("published", false) ?>
+	<ul>
+	<?php foreach ($drafts as $draft): ?>
+
+		<li>
+			<a class="entry-link" href="<?php echo $draft->getLocation(true) ?>"><?php echo $draft->getHtml("title") ?></a>
+		</li>
+
+	<?php endforeach ?>
+	</ul>
+
+	<h2>Unlisted</h2>
+	<?php $unlisteds = $this->yellow->content->index(true)->filter("status", "unlisted")->sort("published", false) ?>
+	<ul>
+	<?php foreach ($unlisteds as $unlisted): ?>
+
+		<li>
+			<a class="entry-link" href="<?php echo $unlisted->getLocation(true) ?>"><?php echo $unlisted->getHtml("title") ?></a>
+		</li>
+
+	<?php endforeach ?>
+	</ul>
+
+
+<?php $this->yellow->layout("footer") ?>
