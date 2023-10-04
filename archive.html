@@ -18,7 +18,7 @@ Created by Robert Pfotenhauer on 03.10.23.
     $monthCounts = []; // An array to record the number of posts per month
     
     foreach ($pages as $page): 
-        $publishedDate = $page->getModified($httpFormat = false);
+        $publishedDate = strtotime($page->get("published"));
         $year = date("Y", $publishedDate); // Das Jahr des Beitrags
         $month = date("m", $publishedDate); // Der Monat des Beitrags
     
@@ -41,7 +41,7 @@ Created by Robert Pfotenhauer on 03.10.23.
     // Group posts by year and month
     $groupedPosts = [];
     foreach ($pages as $page):
-        $publishedDate = $page->getModified($httpFormat = false);
+        $publishedDate = strtotime($page->get("published"));
         $year = date("Y", $publishedDate);
         $month = date("m", $publishedDate);
         $groupKey = $year . "-" . $month;
