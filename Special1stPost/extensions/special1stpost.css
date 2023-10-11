@@ -1,0 +1,25 @@
+.special1stpost {
+    padding: 0.25em 0.75rem 0.75em;
+    background-color: var(--link);
+    color: var(--bg);
+    font-weight: 500;
+}
+
+.special1stpost .entry-meta a,
+.special1stpost .entry-content a {
+    color: var(--bg);
+    text-decoration: underline;
+}
+
+.special1stpost .entry-content p {
+    margin: 0;
+}
+
+.special1stpost .entry-title h1 {
+    margin: 0;
+}
+
+.special1stpost .entry-title h1 a,
+.special1stpost .entry-title h1 a:hover {
+    color: var(--bg);
+}
