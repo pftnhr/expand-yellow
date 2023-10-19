@@ -1,6 +1,6 @@
 # A hodgepodge of code snippets that expand Yellow for me.
 
-I have now created the contents as [gists](https://gist.github.com/pftnhr) and merely link them here. The files here, with the exception of this README.md, will no longer be updated.
+This is a list of links to some gists of mine that contain code snippets I use to extend yellow.
 
 ## toc
 
